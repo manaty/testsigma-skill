@@ -12,19 +12,21 @@ a session cookie. See [the skill](plugins/testsigma/skills/testsigma/SKILL.md) a
 
 ## Install in Claude Code
 
-**As a plugin (recommended):**
-```
-/plugin marketplace add manaty/testsigma-skill
-/plugin install testsigma@testsigma-skill
-```
-
-**Or just the skill (clone into your skills dir):**
+**One-line install (works on every build):**
 ```bash
 git clone https://github.com/manaty/testsigma-skill /tmp/tss \
   && mkdir -p ~/.claude/skills \
   && cp -r /tmp/tss/plugins/testsigma/skills/testsigma ~/.claude/skills/testsigma
 ```
-Then start Claude Code and ask it to "use the testsigma skill".
+Then **start a new Claude Code session** (skills load at startup) and ask it to
+"use the testsigma skill". For a project-local install, copy into
+`.claude/skills/testsigma` inside your repo instead.
+
+**As a plugin (only on builds with the `/plugin` command):**
+```
+/plugin marketplace add manaty/testsigma-skill
+/plugin install testsigma@testsigma-skill
+```
 
 ## Use with ChatGPT / other LLMs
 
