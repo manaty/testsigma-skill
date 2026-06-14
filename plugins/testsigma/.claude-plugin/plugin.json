@@ -1,0 +1,8 @@
+{
+  "name": "testsigma",
+  "description": "Author and run Testsigma tests over the API — create features, scenarios, test cases, NLP steps, and suites, then trigger test plans for CI/CD.",
+  "version": "0.1.0",
+  "author": { "name": "Manaty" },
+  "homepage": "https://github.com/manaty/testsigma-skill",
+  "keywords": ["testsigma", "test-automation", "e2e", "qa", "ci"]
+}

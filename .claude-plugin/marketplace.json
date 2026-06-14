@@ -1,0 +1,15 @@
+{
+  "name": "testsigma-skill",
+  "owner": { "name": "Manaty", "url": "https://github.com/manaty" },
+  "metadata": {
+    "description": "Manaty marketplace — Testsigma automation skill for Claude Code.",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "testsigma",
+      "source": "./plugins/testsigma",
+      "description": "Drive Testsigma over the API: create features/scenarios/test-cases/NLP-steps/suites and trigger test plans."
+    }
+  ]
+}

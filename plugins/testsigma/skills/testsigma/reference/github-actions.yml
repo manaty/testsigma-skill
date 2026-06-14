@@ -1,0 +1,19 @@
+# Example GitHub Actions workflow: trigger a Testsigma test plan.
+# Copy to .github/workflows/testsigma.yml in your repo.
+# Secrets needed: TESTSIGMA_API_KEY, TESTSIGMA_TEST_PLAN_ID (and optionally TESTSIGMA_ENV_ID).
+name: Testsigma
+on:
+  workflow_dispatch:
+  # push: { branches: [main] }
+jobs:
+  testsigma:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Trigger Testsigma plan and wait
+        env:
+          TESTSIGMA_API_KEY: ${{ secrets.TESTSIGMA_API_KEY }}
+          TESTSIGMA_TEST_PLAN_ID: ${{ secrets.TESTSIGMA_TEST_PLAN_ID }}
+          TESTSIGMA_ENV_ID: ${{ secrets.TESTSIGMA_ENV_ID }}
+        # path to run-testsigma.sh from this skill
+        run: bash run-testsigma.sh
